@@ -2,34 +2,57 @@
 #include<stdlib.h>
 #include<locale.h>
 
-void main(){
-setlocale(LC_ALL,"portugues");
 
-int n1,n2,n3;
-int result
-printf("digite uma operação\n")
 
-scanf("%d", &n3);
-
-if(n3==1){
-printf("digite o primeiro número");
-scanf("%d", n1);
-printf("digite o segundo número");
-scanf("%d", &n2);
-resultado = n1 + n2;
-printf("resultado da soma é %d + %d:%d",n1,n2,result); 
+float val1(){
+	float valor;
+	printf("\nDigite o primeiro valor");
+	scanf("%f", &valor);
+return valor;
 }
 
-if(n3==2)
-printf()
+char opera(){
+	char operacao;
+	printf("\nDigite uma operacao");
+	scanf("%c",&operacao);
+	return operacao;
+}
 
+void conta(float valor1, char operacao){
+	float valor2, result;
+	switch(operacao){
+		case('+'):
+		printf("\nDigite o segundo valor");
+		scanf("%f", &valor2);
+		result = valor1 + valor2;
+		printf("\no valor da soma é:%.2f\n", result);
+		break;
 
-	
+		case('-'):
+		printf("\nDigite o segundo valor");
+		scanf("%f", &valor2);
+		result = valor1 - valor2;
+		printf("\no valor da subtração é:%.2f\n", result);
+		break;
 
+		case('*'):
+		printf("\nDigite o segundo valor");
+		scanf("%f", &valor2);
+		result = valor1 * valor2;
+		printf("\no valor da multiplicação é:%.2f", result);
+		break;
 
+		case('/'):
+		do{
+		printf("\nDigite o segundo valor");
+		scanf("%f", &valor2);
+		}while (valor2 == 0);
+		result = valor1 / valor2;
+		printf("\no valor da divisão é:%.2f", result);
+	}
+}
 
-
-
-
-
+void main(){
+	printf("\nBoa noite\n");
+	conta(val1(),opera());
 }
